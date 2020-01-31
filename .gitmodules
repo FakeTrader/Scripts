@@ -6,3 +6,7 @@
 	path = yichahucha
 	url = https://github.com/yichahucha/surge
 	branch = master
+[submodule "chavyleung"]
+	path = chavyleung
+	url = https://github.com/chavyleung/scripts
+	branch = master
