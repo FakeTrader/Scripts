@@ -2,3 +2,7 @@
 	path = NobyDa
 	url = https://github.com/NobyDa/Script
 	branch = master
+[submodule "yichahucha"]
+	path = yichahucha
+	url = https://github.com/yichahucha/surge
+	branch = master
