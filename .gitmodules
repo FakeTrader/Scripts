@@ -1,0 +1,4 @@
+[submodule "NobyDa"]
+	path = NobyDa
+	url = https://github.com/NobyDa/Script
+	branch = master
