@@ -10,7 +10,7 @@
 	path = chavyleung
 	url = https://github.com/chavyleung/scripts
 	branch = master
-[submodule "langkhach270389"]
-	path = langkhach270389
+[submodule "langkhach"]
+	path = langkhach
 	url = https://github.com/langkhach270389/Scripting
 	branch = master
