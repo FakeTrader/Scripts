@@ -1,5 +1,8 @@
 # Scripts
 
+git clone --depth 1 --recursive --shallow-submodules https://github.com/eegod/Scripts.git
+git submodule update --init --recursive
+
 ## Reference
 
 
