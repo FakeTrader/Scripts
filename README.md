@@ -15,6 +15,7 @@ git submodule update --recursive --remote
 | --------------- | ------------------------------------------------- |
 | chavyleung      | <https://github.com/chavyleung/scripts>           |
 | Choler          | <https://github.com/Choler/Surge>                 |
+| eHpo1           | <https://github.com/eHpo1/Rules>                  |
 | langkhach       | <https://github.com/langkhach270389/Scripting>    |
 | Meeta           | <https://github.com/MeetaGit/MeetaRules>          |
 | NavePnow        | <https://github.com/navepnow/profiles>            |
