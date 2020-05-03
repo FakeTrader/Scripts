@@ -1,22 +1,19 @@
 /**
- * 本地VIP，可导出账单，不能换肤
- *
  * [rewrite_local]
  * ^https?:\/\/api\.feidee\.net\/v1\/pay\/vip url script-response-body https://raw.githubusercontent.com/eegod/Scripts/master/_scripts/MyMoney.js
- *
  * [mitm]
  * hostname = api.feidee.net,
  */
 
 var obj = JSON.parse($response.body);
+
 obj = {
-  "vip_type": [
-    2
-  ],
-  "out_of_trial": 1,
-  "device": 0,
-  "auto_renew_status": 0,
-  "is_show_coupon": false,
-  "expire_date": 3787031138000
-},
+   "raw_data": "DBcBHgojrvPgruIJMfb4KK/76CmjxSHSp9KipRwOnQUuf+Gt2FncFUzNvxZydUeXEzDZt/XWEm91lHFYrvT0f2AFap2L4psLI/34sKU9VLGH7kFsBYlexU/nifBtosMJqQxL4TU1pjvjl+1uyWsFAeGR42aEnVhQWgvJB5Ovcd0=",
+   "license": {
+     "status": "sub",
+     "expireTime": 3070928235000
+   },
+   "_code": 200
+ }
+
 $done({body: JSON.stringify(obj)});

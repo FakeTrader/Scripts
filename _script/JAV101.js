@@ -1,8 +1,8 @@
 /* Quantumult X 脚本: 啪啪啪研究所vip❤凉意  下载链接🔗推荐码：RYZJVB
 https://zhhml.cn?code=RYZJVB&channelCode=share
 
-[rewrite_local] 
-#JAV101无限观看
+[rewrite_local]
+# JAV101无限观看
 ^https\:\/\/api\..*\.cn\/v1\/user\/info url script-response-body JAV101.js
 [mitm] hostname = api.*.cn,
 

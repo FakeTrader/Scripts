@@ -1,19 +1,47 @@
-/**
- * [rewrite_local]
- * ^https?:\/\/api\.feidee\.net\/v1\/pay\/vip url script-response-body https://raw.githubusercontent.com/eegod/Scripts/master/_scripts/MyMoney.js
- * [mitm]
- * hostname = api.feidee.net,
- */
+/*
 
-var obj = JSON.parse($response.body);
+Quantumult X 脚本:
+Xmind Unlock Annual Subscriptions （by LTribe）
+Xmind Download Link : http://t.cn/A6zhp3Bm
+Thanks To@xiaozhuolao's membership data.
 
-obj = {
-   "raw_data": "DBcBHgojrvPgruIJMfb4KK/76CmjxSHSp9KipRwOnQUuf+Gt2FncFUzNvxZydUeXEzDZt/XWEm91lHFYrvT0f2AFap2L4psLI/34sKU9VLGH7kFsBYlexU/nifBtosMJqQxL4TU1pjvjl+1uyWsFAeGR42aEnVhQWgvJB5Ovcd0=",
-   "license": {
-     "status": "sub",
-     "expireTime": 3070928235000
-   },
-   "_code": 200
- }
+[rewrite_local]
+# Xmind Unlock annual subscriptions （by LTribe）
+https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|profile\/) url script-response-body XMind.js
 
+[mitm]
+hostname = *.xmind.*,
+
+*/
+
+const path1 = "/devices";
+const path2 = "/user_sub_status";
+const path3 = "/profile/";
+let obj = JSON.parse($response.body);
+
+if ($request.url.indexOf(path1) != -1){
+    obj.license = {
+    "status": "sub",
+    "expireTime": 4102494057000
+  };
+ };
+  
+if ($request.url.indexOf(path2) != -1){
+    obj = {
+    "_code": 200,
+    "ios": {
+    "status": "sub",
+    "expireTime": 4102494057000
+  }};
+ };
+
+if ($request.url.indexOf(path3) != -1){
+  obj.sub = {
+    "ios": {
+      "status": "sub",
+      "expireTime": 4102494057000,
+      "buyable": 0
+    }};
+  };
+  
 $done({body: JSON.stringify(obj)});
