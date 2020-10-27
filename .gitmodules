@@ -17,3 +17,6 @@
 [submodule "sazs34"]
 	path = sazs34
 	url = https://github.com/sazs34/TaskConfig
+[submodule "nzw9314"]
+	path = nzw9314
+	url = https://github.com/nzw9314/QuantumultX
